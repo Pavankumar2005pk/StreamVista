@@ -9,16 +9,18 @@
       }
     }
   ],
-  "build": {
-    "env": {
-      "REACT_APP_TMDB_BEARER": "@tmdb_bearer",
-      "REACT_APP_TMDB_BASE_URL": "https://api.themoviedb.org/3"
-    }
+  "env": {
+    "REACT_APP_TMDB_BEARER": "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwODUzZjc0MWNiODhjZjE0MjE4ZjI1NWZhNzBjZjIyNyIsIm5iZiI6MTc2MDQxMjE1Mi41OTUsInN1YiI6IjY4ZWRjMWY4ZDJjMGJmNWZlN2YxMWZiYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fqWH96uuv2qWhnHOJG5vYjukLDaLX2QN1bml-VM3xMs",
+    "REACT_APP_TMDB_BASE_URL": "https://api.themoviedb.org/3"
   },
   "routes": [
     {
       "src": "/static/(.*)",
       "dest": "/static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     },
     {
       "src": "/service-worker.js",

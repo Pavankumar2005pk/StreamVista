@@ -22,8 +22,8 @@ A modern, responsive movie discovery application built with React that helps you
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/cineflux.git
-   cd cineflux
+   git clone https://github.com/Pavankumar2005pk/StreamVista.git
+   cd StreamVista/streamvista
    ```
 
 2. **Install dependencies**

@@ -1,11 +1,12 @@
-// Simple TMDB API helper
+// TMDB API Configuration
 const TMDB_BASE_URL = process.env.REACT_APP_TMDB_BASE_URL || 'https://api.themoviedb.org/3';
 
-// TMDB bearer token is loaded from .env file (REACT_APP_TMDB_BEARER)
-const TMDB_BEARER = process.env.REACT_APP_TMDB_BEARER;
+// Fallback TMDB bearer token (use environment variable if available, otherwise use this fallback)
+const FALLBACK_TMDB_BEARER = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwODUzZjc0MWNiODhjZjE0MjE4ZjI1NWZhNzBjZjIyNyIsIm5iZiI6MTc2MDQxMjE1Mi41OTUsInN1YiI6IjY4ZWRjMWY4ZDJjMGJmNWZlN2YxMWZiYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fqWH96uuv2qWhnHOJG5vYjukLDaLX2QN1bml-VM3xMs';
+const TMDB_BEARER = process.env.REACT_APP_TMDB_BEARER || FALLBACK_TMDB_BEARER;
 
-if (!TMDB_BEARER) {
-  console.warn('Warning: TMDB Bearer token is not set. Please check your .env file.');
+if (!process.env.REACT_APP_TMDB_BEARER) {
+  console.warn('Warning: Using fallback TMDB Bearer token. For production, please set REACT_APP_TMDB_BEARER in your environment variables.');
 }
 
 const authHeader = {

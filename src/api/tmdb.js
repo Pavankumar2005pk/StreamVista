@@ -43,7 +43,7 @@ export const tmdb = {
     details: (id) => get(`/collection/${id}`),
   },
   account: {
-    details: () => get('/account/22383580'),
+    details: () => get('/account/22383246'),
   },
 };
 
